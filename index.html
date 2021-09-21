@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Activity 1</title>
+  </head>
+
+  <body>
+    <label for="name">Text Input</label>
+    <input type="text" id="InputText">
+    <button id="ActionButton">Click Here</button>
+    <script>
+        document.getElementById('ActionButton').addEventListener('click', basic);
+        function basic(){
+            let a= (document.getElementById('InputText')).value;
+            console.log(a);
+
+            (function (){
+                let count=0;
+                for (let i=0; i<a.length; i++){
+                    if (a[i]==='a'){
+                        count+=1;
+                    }
+                }
+                console.log(count);
+            })(a);
+
+            let art = s => s[0]=='a'||s[0]=='e'||s[0]=='i'||s[0]=='o'||s[0]=='u'? 'an' : 'a';
+            console.log(art(a.toLowerCase()));
+        }
+    </script>
+  </body>
+</html>
