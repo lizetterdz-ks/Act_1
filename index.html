@@ -24,9 +24,11 @@
                 }
                 console.log(count);
             })(a);
-
-            let art = s => s[0]=='a'||s[0]=='e'||s[0]=='i'||s[0]=='o'||s[0]=='u'? 'an' : 'a';
+            
+            if (a.length !== 0) {
+              let art = s => s[0]=='a'||s[0]=='e'||s[0]=='i'||s[0]=='o'||s[0]=='u'? 'an' : 'a';
             console.log(art(a.toLowerCase()));
+            }
         }
     </script>
   </body>
